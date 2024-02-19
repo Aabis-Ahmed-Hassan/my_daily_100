@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_daily_100/screens/profile_setup_successfully.dart';
 
 import '../components/my_app_bar_with_back_option_only.dart';
 import '../components/my_button.dart';
@@ -79,7 +80,8 @@ class UploadImage extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => UploadImage()));
+                                    builder: (context) =>
+                                        ProfileSetupSuccessfully()));
                           }),
                     ),
                     SizedBox(
