@@ -29,7 +29,7 @@ class _SignUpState extends State<SignUp> {
             child: Column(
               children: [
                 SizedBox(
-                  height: height * 0.075,
+                  height: height * 0.085,
                 ),
                 Image(
                   height: height * 0.05,
@@ -54,7 +54,7 @@ class _SignUpState extends State<SignUp> {
                   style: AppTexts.myParagraph1TS,
                 ),
                 SizedBox(
-                  height: height * 0.05,
+                  height: height * 0.025,
                 ),
                 MyTextFormField(
                     label: 'Email',
@@ -212,7 +212,7 @@ class _SignUpState extends State<SignUp> {
                     ),
                   ),
                 ),
-                SizedBox(height: height * 0.0125),
+                SizedBox(height: height * 0.035),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -225,8 +225,8 @@ class _SignUpState extends State<SignUp> {
                         fontSize: 14,
                       ),
                     ),
-                    TextButton(
-                      onPressed: () {
+                    InkWell(
+                      onTap: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => SignIn()));
                       },

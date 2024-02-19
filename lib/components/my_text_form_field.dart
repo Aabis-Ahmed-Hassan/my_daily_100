@@ -40,6 +40,8 @@ class MyTextFormField extends StatelessWidget {
                   color: Color(0xffE2E2E2), // Border color
                   width: 2),
             ),
+            prefixIcon: showPrefixIcon ? prefixIcon : null,
+            suffixIcon: showSuffixIcon ? suffixIcon : null,
             hintText: hintText,
             hintStyle: const TextStyle(
               fontWeight: FontWeight.w500,

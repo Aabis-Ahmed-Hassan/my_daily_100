@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_daily_100/components/my_dropdown.dart';
 import 'package:my_daily_100/components/my_text_form_field.dart';
 import 'package:my_daily_100/screens/add_motivation.dart';
 
@@ -108,21 +109,15 @@ class ProfileInformation extends StatelessWidget {
                         SizedBox(
                           height: height * 0.025,
                         ),
-                        MyTextFormField(
-                          label: 'Full Name',
-                          hintText: 'John Doe',
-                          showPrefixIcon: false,
-                          showSuffixIcon: false,
-                        ),
+                        MyDropDown(
+                            initialSelectionText: 'United States of America',
+                            headingAboveDropDown: 'Country'),
                         SizedBox(
                           height: height * 0.025,
                         ),
-                        MyTextFormField(
-                          label: 'Full Name',
-                          hintText: 'John Doe',
-                          showPrefixIcon: false,
-                          showSuffixIcon: false,
-                        ),
+                        MyDropDown(
+                            initialSelectionText: 'New York ',
+                            headingAboveDropDown: 'City'),
                         SizedBox(
                           height: height * 0.025,
                         ),

@@ -145,7 +145,7 @@ class SignIn extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: height * 0.1,
+                  height: height * 0.12,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -159,8 +159,8 @@ class SignIn extends StatelessWidget {
                         fontSize: 14,
                       ),
                     ),
-                    TextButton(
-                      onPressed: () {
+                    InkWell(
+                      onTap: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => SignUp()));
                       },

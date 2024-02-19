@@ -50,6 +50,9 @@ class ResetPassword extends StatelessWidget {
                   showPrefixIcon: false,
                   showSuffixIcon: false,
                 ),
+                SizedBox(
+                  height: height * 0.008,
+                ),
                 Text(
                   '*Please make sure the password match',
                   style: TextStyle(
