@@ -4,7 +4,7 @@ import '../components/my_app_bar_with_back_option_only.dart';
 import '../components/my_button.dart';
 
 class UploadImage extends StatelessWidget {
-  const UploadImage({super.key});
+  UploadImage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,65 +12,111 @@ class UploadImage extends StatelessWidget {
     var width = MediaQuery.of(context).size.width * 1;
 
     return Scaffold(
-      appBar: MyAppBarWithBackOptionOnly(),
-      body: SingleChildScrollView(
-        child: Padding(
+        appBar: MyAppBarWithBackOptionOnly(),
+        body: Padding(
             padding: EdgeInsets.symmetric(horizontal: width * 0.055),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
+            child: Stack(
               children: [
-                SizedBox(
-                  height: height * 0.045,
-                ),
-                const Text(
-                  'Reset Password',
-                  style: TextStyle(
-                    color: Color(0xffD11A38),
-                    fontWeight: FontWeight.w600,
-                    fontSize: 32,
-                    fontFamily: 'Plus Jakarta Sans',
+                SingleChildScrollView(
+                  child: Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          height: height * 0.025,
+                        ),
+                        const Text(
+                          'Upload a Picture of your Dreams',
+                          style: TextStyle(
+                            color: Color(0xffD11A38),
+                            fontWeight: FontWeight.w600,
+                            fontSize: 32,
+                            fontFamily: 'Plus Jakarta Sans',
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        SizedBox(
+                          height: height * 0.0285,
+                        ),
+                        Column(
+                          children: List.generate(
+                            3,
+                            (index) => MyMotivation(),
+                          ),
+                        ),
+
+                        /*
+                        *
+                        *
+                        *     MyMotivation(title: 'Health', imageAddress: 'adf'),
+                            MyMotivation(title: 'Wealth', imageAddress: 'adf'),
+                            MyMotivation(title: 'Travel', imageAddress: 'adf'),
+
+                        *
+                        * */
+                      ],
+                    ),
                   ),
-                  textAlign: TextAlign.center,
                 ),
-                SizedBox(
-                  height: height * 0.0275,
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Container(
+                      height: height * 0.1275,
+                      color: Colors.white,
+                    ),
+                  ],
                 ),
-                SizedBox(
-                  height: height * 0.025,
-                ),
-                MyButton(title: 'Save New Password', onTap: () {}),
-                MyUpload(),
-                MyUpload(),
-                MyUpload(),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Align(
+                      alignment: Alignment.bottomCenter,
+                      child: MyButton(
+                          title: 'Save',
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => UploadImage()));
+                          }),
+                    ),
+                    SizedBox(
+                      height: height * 0.05,
+                    ),
+                  ],
+                )
               ],
-            )),
-      ),
-    );
+            )));
   }
 }
 
-class MyUpload extends StatelessWidget {
-  const MyUpload({super.key});
-
+class MyMotivation extends StatelessWidget {
+  MyMotivation({super.key});
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height * 1;
     var width = MediaQuery.of(context).size.width * 1;
     return Container(
-      height: height * 0.15,
+      margin: EdgeInsets.only(bottom: height * 0.02),
+      height: height * 0.19,
       decoration: BoxDecoration(
-        color: Color(0xffFFE5E9),
+        boxShadow: [
+          const BoxShadow(
+            color: Color(0xff000000),
+            blurRadius: 0.2,
+          ),
+        ],
+        color: const Color(0xffFFE5E9),
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
-          color: Color(0xffE2E2E2),
+          color: const Color(0xffE2E2E2),
         ),
       ),
       child: Center(
-        child: Icon(
-          Icons.upload,
-          size: 50,
-          color: Color(0xff595959),
+        child: Image(
+          image: AssetImage(''),
         ),
       ),
     );
