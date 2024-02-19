@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_daily_100/components/my_app_bar_with_back_option_only.dart';
 import 'package:my_daily_100/components/my_button.dart';
-import 'package:my_daily_100/components/my_text_form_fielrt';
+
+import '../components/my_text_form_field.dart';
 
 class ResetPassword extends StatelessWidget {
   const ResetPassword({super.key});

@@ -12,17 +12,16 @@ class PrivacyPolicy extends StatelessWidget {
     return Scaffold(
         body: SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.only(
-            left: width * 0.03,
-            right: width * 0.03,
-            top: height * 0.02,
-            bottom: height * 0.03),
+        padding: EdgeInsets.symmetric(horizontal: width * 0.055),
         child: Center(
           child: Container(
             margin:
                 EdgeInsets.only(top: height * 0.125, bottom: height * 0.0125),
-            padding: EdgeInsets.symmetric(
-                horizontal: width * 0.03, vertical: height * 0.02),
+            padding: EdgeInsets.only(
+                left: width * 0.03,
+                right: width * 0.03,
+                top: height * 0.02,
+                bottom: height * 0.03),
             // height: height * 0.8,
             width: double.infinity,
             decoration: BoxDecoration(

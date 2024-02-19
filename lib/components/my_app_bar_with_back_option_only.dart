@@ -13,8 +13,9 @@ class MyAppBarWithBackOptionOnly extends StatelessWidget
     var height = MediaQuery.of(context).size.height * 1;
     var width = MediaQuery.of(context).size.width * 1;
     return AppBar(
+      automaticallyImplyLeading: false,
       title: InkWell(
-        onTap: (){
+        onTap: () {
           Navigator.pop(context);
         },
         child: Row(
